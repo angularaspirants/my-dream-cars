@@ -1,0 +1,18 @@
+<app-filter [filterInputData]="brandList"
+            [filterType]="'Brand'"
+            (itemSelected)="onItemSelection('Brand', $event)"
+>
+</app-filter>
+<div class="divider"></div>
+<app-filter [filterInputData]="modelList"
+            [filterType]="'Model'"
+            (itemSelected)="onItemSelection('Model', $event)"
+>
+
+</app-filter>
+<div class="divider"></div>
+<app-filter></app-filter>
+<div class="divider"></div>
+<app-filter></app-filter>
+<div class="divider"></div>
+<app-filter></app-filter>

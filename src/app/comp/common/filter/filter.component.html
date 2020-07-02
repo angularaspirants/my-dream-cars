@@ -1,0 +1,6 @@
+<select (change)="onSelection($event.target.value)">
+  <option value="none" selected disabled hidden>
+    {{filterType}}
+  </option>
+  <option *ngFor="let filter of filterInputData">{{filter}}</option>
+</select>
