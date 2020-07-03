@@ -1,6 +1,8 @@
-<select (change)="onSelection($event.target.value)">
-  <option value="none" selected disabled hidden>
-    {{filterType}}
-  </option>
-  <option *ngFor="let filter of filterInputData">{{filter}}</option>
-</select>
+<mat-form-field appearance="fill">
+  <mat-label>Choose {{filterType}}</mat-label>
+  <mat-select (selectionChange)="onSelection($event.value)">
+    <mat-option value="none">None</mat-option>
+    <mat-option *ngFor="let filter of filterInputData" [value]="filter">{{filter}}</mat-option>
+  </mat-select>
+</mat-form-field>
+

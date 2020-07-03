@@ -8,6 +8,8 @@ import {RouterModule, Routes} from '@angular/router';
 import { CarCardListComponent } from './comp/common/car-card-list/car-card-list.component';
 import { BuyCarFiltersComponent } from './comp/buy-car/buy-car-filters/buy-car-filters.component';
 import { FilterComponent } from './comp/common/filter/filter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material.module';
 
 const routes: Routes = [
   { path: 'buy-car', component: BuyCarComponent},
@@ -26,7 +28,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
